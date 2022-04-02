@@ -343,5 +343,15 @@ seventh_item.print_jet(eight_item)
 total = seventh_item.quantity + eight_item.quantity
 print(total)
 
+jets = [Jets("MIG29", "ZSRR",10), Jets("SU33", "Rosja",15)]
+total = 0
+for item in jets:
+    total += item.quantity
+print("Suma samolotów:", total)
 
+number = [1,2]
+total = 0
+for item in number:
+    total += item.real
+print("Suma części rzeczywistych:", total)
 
