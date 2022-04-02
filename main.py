@@ -224,3 +224,71 @@ class Person:
         print("Cześć, mam na imię " + abc.name)
 
 p1.myfunc()
+
+p1.age = 40
+print(p1.age)
+del p1.age
+print(p1.age)
+
+del p1
+p1.myfunc()
+
+class Person:
+    pass
+
+class MyClass:
+    x = 5
+
+p1 = MyClass()
+print(p1.x)
+
+class KontoBankowe:
+    def __init__(self, nazwa, stan = 0):
+        self.nazwa = nazwa
+        self.stan = stan
+
+    def info(self):
+        print("nazwa:", self.nazwa)
+        print("stan:", self.stan)
+
+    def wyplac(self, ilosc):
+        self.stan -= ilosc
+        print("nazwa:", self.nazwa)
+        print("stan:", self.stan)
+
+    def wplac(self, ilosc):
+        self.stan += ilosc
+        print("nazwa:", self.nazwa)
+        print("stan:", self.stan)
+
+
+jk = KontoBankowe("Jan Kowalski", 1000)
+jk.info()
+
+jk.wplac(2000)
+jk.wyplac(2500)
+jk.stan = 0
+
+class Vehicle:
+    pass
+
+class Jets:
+    def __init__(self, name, origin):
+        self.name = name
+        self.origin = origin
+
+class Jets:
+    def __init__(self, name, country):
+        self.name = name
+        self.origin = country
+
+first_item = Jets("F16", "USA")
+
+a = first_item.name
+print(a)
+b = first_item.origin
+print(b)
+print (a, b)
+
+
+
