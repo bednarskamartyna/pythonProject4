@@ -133,3 +133,23 @@ print(o.atrybut_drugi)
 #wariant 2: atrybut nadawany przy tworzeniu obiektu klasy
 #związany z konkretnymi instancjami
 
+class NazwaKlasy:
+    def __init__(self, trzeci):
+        self.atrybut_pierwszy = "Wartość"
+        self.atrybut_drugi = 123.0
+        self.atrybut_trzeci = trzeci
+
+instancja = NazwaKlasy("test")
+print(instancja.atrybut_pierwszy)
+print(instancja.atrybut_drugi)
+print(instancja.atrybut_trzeci)
+
+class MyClass:
+    x = 5
+
+p1 = MyClass()
+print(p1.x)
+
+class Parrot:
+    pass
+
