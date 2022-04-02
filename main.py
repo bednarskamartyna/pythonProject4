@@ -153,3 +153,74 @@ print(p1.x)
 class Parrot:
     pass
 
+obj = Parrot()
+class Parrot:
+    # atrybut klasy
+    species = "ptak"
+
+    # atrybut instancji
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+blu = Parrot("Blu", 10)
+woo = Parrot("Woo", 15)
+
+# uzyskanie dostępu do atrybutów klasy
+print("Blu to", blu.__class__.species)
+print("Woo to również", woo.species)
+# za chwilę wytłumaczymy sobie dokładniej o co chodzi z __class__
+
+# uzyskanie dostępu do atrybutów instancji
+print(blu.name, "ma", blu.age, "lat")
+print(woo.name, "ma", woo.age, "lat")
+
+#tworzenie metod instancji
+class Parrot:
+
+    # atrybuty instancji
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # metoda instancji
+    def sing(self, song):
+        return self.name + " śpiewa " + song
+
+    def dance(self):
+        return self.name + " teraz tańczy"
+
+blu = Parrot("Blu", 10)
+print(blu.sing('Happy'))
+print(blu.dance())
+
+#przykład klasy - osoba
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p1 = Person("Jan", 36)
+print(p1.name)
+print(p1.age)
+
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def myfunc(self):
+        print("Cześć, mam na imię " + self.name)
+
+p1.myfunc()
+
+class Person:
+    def __init__(mysillyobject, name, age):
+        mysillyobject.name = name
+        mysillyobject.age = age
+
+    def myfunc(abc):
+        print("Cześć, mam na imię " + abc.name)
+
+p1.myfunc()
