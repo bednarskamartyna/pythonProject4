@@ -291,4 +291,57 @@ print(b)
 print (a, b)
 
 
+class Vehicle:
+    def __init__(self, max_speed, mileage):
+        self.max_speed = max_speed
+        self.mileage = mileage
+        print(car1.max_speed)
+        print(car1.mileage)
+
+Vehicle1 = Vehicle(240, 18000)
+
+class Car:
+    def __init__(self, color, mileage):
+        self.color = color
+        self.mileage = mileage
+        print(self.color +" samochód ma " + str(self.mileage) + " kilometrów przebiegu.")
+
+car1 = Car(color = "Czerwony", mileage = 20_000)
+car2 = Car("Niebieski", 30_000)
+car3 = Car("Zielony", 10000)
+
+for car in (car1, car2, car3):
+    print(f"{car.color} samochód ma {car.mileage:,} kilometrów przebiegu.")
+
+
+class Jets:
+    def __init__(self, name, country, quantity):
+        self.name = name
+        self.origin = country
+        self.quantity = quantity
+
+    def print_jet(self, other_jet):
+        print(self.name, self.origin, self.quantity)
+        print(other_jet.name, other_jet.origin, other_jet.quantity)
+
+first_item = Jets("SU33", "Rosja")
+second_item = Jets("AJS37", "Szwecja")
+third_item = Jets("Mirage2000", "Francja")
+fourth_item = Jets("F14", "USA")
+fifth_item = Jets("Mig29", "ZSRR")
+sixth_item = Jets("A10", "USA")
+
+first_army=[first_item.name,second_item.name,third_item.name,fourth_item.name,fifth_item.name,sixth_item.name]
+print(first_army)
+
+first_item.print_jet(second_item)
+
+seventh_item = Jets("F14", "USA",87)
+eight_item = Jets("Mirage2000", "Francja",35)
+seventh_item.print_jet(eight_item)
+
+total = seventh_item.quantity + eight_item.quantity
+print(total)
+
+
 
